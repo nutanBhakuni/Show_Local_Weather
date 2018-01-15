@@ -14,6 +14,13 @@
     let lati = position.coords.latitude;
     
     para.innerHTML = "Longitude: " + longi + " " + "Latitude: " + lati;
+    
+    fetch('https://fcc-weather-api.glitch.me/api/current?lat=' + lati + '&lon=' + longi)
+      .then(function(response){
+        return response.json();
+    }).then(function(data){
+      console.log(data);
+    });
   }
   
   function onError(){
