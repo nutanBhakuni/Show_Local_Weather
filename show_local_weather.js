@@ -25,6 +25,7 @@
     }).then(function(data){
       //let image = document.querySelector('img');
       //image.src = data.weather[0].icon;
+      console.log(data);
       para.innerHTML = data.current.temp_c;
     });
   }
