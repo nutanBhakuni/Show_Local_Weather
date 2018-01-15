@@ -15,7 +15,7 @@
     
    // para.innerHTML = "Longitude: " + longi + " " + "Latitude: " + lati;
     
-    fetch('https://api.apixu.com/v1/current.json?key=aba9f3d569dd440cb8692516181501&q='+lati+','+longi)
+    fetch('https://api.apixu.com/v1/current.json?key=aba9f3d569dd440cb8692516181501&q='+longi+','+lati)
       .then(function(response){
         return response.json();
     }).then(function(data){
