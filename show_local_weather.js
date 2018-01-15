@@ -10,8 +10,8 @@
   }
   
   function onSuccess(position){
-    let longi = position.coords.longitude;
-    let lati = position.coords.latitude;
+    let longi = 33.8688//position.coords.longitude;
+    let lati = 151.2093//position.coords.latitude;
     
    // para.innerHTML = "Longitude: " + longi + " " + "Latitude: " + lati;
     
