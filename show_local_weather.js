@@ -1,12 +1,18 @@
 (function(){
   let para = document.querySelector('p');
   
+  var options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+  };
+
   if(!navigator.geolocation){
     para.innerHTML = "Sorry, geolocation is not supported by your browser";
   }
   else{
     para.innerHTML = "Retrieveing Coordinates...";
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
   }
   
   function onSuccess(position){
