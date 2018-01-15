@@ -23,10 +23,10 @@
       .then(function(response){
         return response.json();
     }).then(function(data){
-      //let image = document.querySelector('img');
-      //image.src = data.weather[0].icon;
       console.log(data);
-      para.innerHTML = data.current.temp_c;
+      para.innerHTML = data.current.temp_c + " " + data.current.condition.text + " " + data.location.name + " " + data.location.region + " " + data.location.country;
+      let image = document.querySelector('img');
+      image.src = data.current.condition.icon;
     });
   }
   
