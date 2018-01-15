@@ -10,17 +10,18 @@
   }
   
   function onSuccess(position){
-    let longi = 33.8688//position.coords.longitude;
-    let lati = 151.2093//position.coords.latitude;
+    let longi = position.coords.longitude;
+    let lati = position.coords.latitude;
     
    // para.innerHTML = "Longitude: " + longi + " " + "Latitude: " + lati;
     
-    fetch('https://fcc-weather-api.glitch.me/api/current?lat=' + lati + '&lon=' + longi)
+    fetch('https://api.apixu.com/v1/current.json?key=aba9f3d569dd440cb8692516181501&q='+lati+','+longi)
       .then(function(response){
         return response.json();
     }).then(function(data){
-      let image = document.querySelector('img');
-      image.src = data.weather[0].icon;
+      //let image = document.querySelector('img');
+      //image.src = data.weather[0].icon;
+      console.log(data);
     });
   }
   
