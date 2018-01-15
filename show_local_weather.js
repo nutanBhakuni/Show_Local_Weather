@@ -19,7 +19,8 @@
       .then(function(response){
         return response.json();
     }).then(function(data){
-      console.log(data);
+      let image = document.querySelector('img');
+      image.src = data.weather[0].icon;
     });
   }
   
