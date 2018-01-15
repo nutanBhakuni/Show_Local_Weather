@@ -13,7 +13,7 @@
     let longi = position.coords.longitude;
     let lati = position.coords.latitude;
     
-    para.innerHTML = "Longitude: " + longi + " " + "Latitude" " + lati;
+    para.innerHTML = "Longitude: " + longi + " " + "Latitude: " + lati;
   }
   
   function onError(){
